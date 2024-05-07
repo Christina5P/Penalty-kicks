@@ -25,5 +25,7 @@ https://www.giraffeacademy.com/programming-languages/python - tutoring of format
 https://www.w3schools.com/python - tutoring of formatting
 https://econowmics.com/python-penalty-kicks-simulator/ - function for penaltykicks
 https://www.101computing.net/penalty-shootout/ - tutoring video
+https://dcallanit.blogspot.com/2015/10/python-penalty-shoot-out.html - inspiration of penalty shoot game
+
 
 
