@@ -3,6 +3,7 @@
 #fig, ax = pitch.draw(figsize=(8, 4))
 #annotation = ax.annotate('Who can resist this?', (60, 10), fontsize=30, ha='center')
 import random
+import json
 
 # List for direction you will kick  
 kicks_direction = ['lt', 'lb', 'mt', 'mb', 'rt', 'rb', 'out']

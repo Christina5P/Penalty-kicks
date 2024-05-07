@@ -15,6 +15,16 @@
 ## Testing
 
 ## Deployment
+At first you commit everything to GitHub
+After that you log in to HEROKU and create a new app.
+You connect the app to your repository in GitHub eith same name
+![alt text](image.png)
+I choose to make a manual deploy, so I can see that everything goes ok.
+![alt text](image-1.png)
+After you have deployed in HEROKU, you can visit your publish webside from GitHub
+![alt text](image-2.png)
+
+
 
 ## Credits
 
