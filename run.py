@@ -1,9 +1,10 @@
-import matplotlib.pyplot as plt # soccer pitch
+import matplotlib.pyplot as plt  # soccer pitch
 from mplsoccer import Pitch, VerticalPitch
-import random # randomchoice to goalkeeper
-import json 
-from colorama import Fore, Back, Style #colour to text
 
+import random  # randomchoice to goalkeeper
+from colorama import Fore, Back, Style  #colour to text
+
+# to animate soccerpitch
 pitch = VerticalPitch(half=True)
 pitch = Pitch(pitch_color='grass', line_color='white',
               stripe=True) 
@@ -13,12 +14,12 @@ fig, ax = pitch.draw()
 kicks_direction = ['lt', 'lb', 'mt', 'mb', 'rt', 'rb']
 # dictionary of directions
 directions = {'lt': 'Left Top',
-    'lb': 'Left Bottom',
-    'mt': 'Middle Top',
-    'mb': 'Middle Bottom',
-    'rt': 'Right top',
-    'rb': 'Right bottom',
-    }
+              'lb': 'Left Bottom',
+              'mt': 'Middle Top',
+              'mb': 'Middle Bottom',
+              'rt': 'Right top',
+              'rb': 'Right bottom',
+             }
 
 # Enter name and ask for instruction or move to game
 name = input('Hi Soccerplayer! Please enter your name: ')
@@ -28,6 +29,7 @@ if response.lower() == 'y':
     print('instructions') 
 elif response.lower() == 'n':
     print("OK, we start!\n")
+    # error msg:
 else:
     print('Something went wrong, please answer (y/n):')
 
@@ -37,9 +39,9 @@ The goalkeeper will either stay in center or jump to left or right side
 to catch the ball.
 """
 
-# function for players penaltys agains goalkeepers choice
-# variabel
-total_penalties = 0   # totalPenalties = penalty(totalPenalties) # antalet sparkar
+
+# variabel totalPenalties,  penalty(totalPenalties) counts shoots 
+total_penalties = 0 
 goalkeeper = None
 
 """ 
@@ -54,38 +56,58 @@ print('   ------------------------------------------------   ')
 print('')
 print('')
 """ 
+
+# function for player to choose where to shoot
 def penalty():
-    global total_penalties
-    penalty_Scores = 0
-    goalkeeper_Scores = 0
+    global total_penalties, goalkeeper
+    penalty_scores = 0
+    goalkeeper_scores = 0
 
-    while total_penalties < 10:
-        # players choice of direction:
+    while total_penalties < 6:
         print('Choose spot from:\n lt=Left Top   lb=Left bottom,\n mt=Middle Top mb=Middle Bottom\n rt=Right Top  rb=Right bottom')
-        userOption = input('Where would you like to shoot?:   ')   
-
-        # randomchoice for the goalkeeper:
-        goalkeeper = random.choice(kicks_direction)
         print('')
-        print('Goalkeeper dives to:', directions[goalkeeper])
-
-        if goalkeeper == userOption:
-            print(Fore.RED + 'Goalkeeper catched the ball!')
+        user_option = input('Where would you like to shoot?:  ')  
+        print('') 
+        valid_options = ['lt', 'lb', 'mt', 'mb', 'rt', 'rb']
+        
+        if user_option in valid_options:
+            print(f'You chose: {user_option}')
+            goalkeeper = random.choice(kicks_direction)
             print('')
-            goalkeeper_Scores += 1
-        elif goalkeeper != userOption:
-            print(Fore.GREEN + 'GOOAAL!')
-            penalty_Scores += 1
-            print('')
+            print('Goalkeeper dives to:', directions[goalkeeper])
+            penalty_scores += 1
+            
+            if goalkeeper == user_option:
+                print(Fore.RED + 'Goalkeeper catched the ball!' + Style.RESET_ALL)
+                print('')
+                goalkeeper_scores += 1
+            else:
+                print(Fore.GREEN + 'GOOAAL!' + Style.RESET_ALL)
+                penalty_scores += 1
+                print('')
         else:
-            print(Fore.RED + 'Try again!')
+            print(Fore.RED + 'Invalid option! Please choose from lt, lb, mt, mb, rt, rb.' + Style.RESET_ALL)
+            print('')
             
         total_penalties += 1
 
-    if total_penalties == 6:
-        # Describe how many penalties are used
+    if total_penalties <= 6:
         print(f'Total penalties taken: {total_penalties}')
-        print(f'Final score: Player {penalty_Scores} - Goalkeeper {goalkeeper_Scores}')
-        return
+        print(f'Final score: Player {penalty_scores} - Goalkeeper {goalkeeper_scores}')
 
+# Call function
 penalty()
+# restart or exit 
+
+restart= input('Good job! Do you want to restart? y/n:  ')
+if response.lower() == 'y':
+    print('Start a new game') 
+    RESET_ALL
+
+elif response.lower() == 'n':
+    print("OK, see you next time \n")
+    exit
+
+    # error msg:
+else:
+    print('Something went wrong, please answer (y/n):')
