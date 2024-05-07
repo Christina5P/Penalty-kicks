@@ -77,7 +77,7 @@ def penalty():
             print('')
             print('Goalkeeper dives to:', directions[goalkeeper])
             penalty_scores += 1
-            
+                
             if goalkeeper == user_option:
                 print(Fore.RED + 'Goalkeeper catched the ball!' + Style.RESET_ALL)
                 print('')
@@ -87,21 +87,21 @@ def penalty():
                 penalty_scores += 1
                 print('')
            
+        else:
+            print(Fore.RED + 'You stumbled on the keys, Please choose from lt, lb, mt, mb, rt, rb' + Style.RESET_ALL)
+            print('')
+           
         # count scores after each shoot 
         total_penalties += 1
         
-        print(f'Total penalties taken: {total_penalties}')
-        print(f'Score: Player {penalty_scores} - Goalkeeper {goalkeeper_scores}')
+        print(f'                                           Total penalties taken: {total_penalties}')
+        print(f'                                           Score: Player {penalty_scores} - Goalkeeper {goalkeeper_scores}')
    
     if total_penalties <= 6:
-        print(f'                                    Total penalties taken: {total_penalties}')
-        print(f'                                    Score: Player {penalty_scores} - Goalkeeper {goalkeeper_scores}')
+        print(f'Total penalties taken: {total_penalties}')
+        print(f'Score: Player {penalty_scores} - Goalkeeper {goalkeeper_scores}')
 
-    else:
-        print(Fore.RED + 'You stumbled on the keys, Please choose from lt, lb, mt, mb, rt, rb' + Style.RESET_ALL)
-        print('')
-        total_penalties += 1
-
+    
 # Call function
 penalty()
 
