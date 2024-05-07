@@ -1,4 +1,4 @@
-#plt.xkcd()
+#
 #pitch = Pitch(pitch_color='grass', stripe=True)
 #fig, ax = pitch.draw(figsize=(8, 4))
 #annotation = ax.annotate('Who can resist this?', (60, 10), fontsize=30, ha='center')
@@ -6,14 +6,14 @@ import random
 import json
 
 # List for direction you will kick  
-kicks_direction = ['lt', 'lb', 'mt', 'mb', 'rt', 'rb', 'out']
+kicks_direction = ['lt', 'lb', 'mt', 'mb', 'rt', 'rb']
 # dictionary of directions
-directions = {'lt': 'lefttop',
-    'lb': 'leftbottom',
-    'mt': 'middletop',
-    'mb': 'middlebottom',
-    'rt': 'righttop',
-    'rb': 'rightbottom',
+directions = {'lt': 'Left Top',
+    'lb': 'Left Bottom',
+    'mt': 'Middle Top',
+    'mb': 'Middle Bottom',
+    'rt': 'Right top',
+    'rb': 'Right bottom',
     }
 
 # Enter name and ask for instruction or move to game
@@ -70,6 +70,7 @@ def penalty():
         elif goalkeeper != userOption:
             print('GOOAAL!')
             penalty_Scores += 1
+            print('')
         else:
             print('Try again!')
             
