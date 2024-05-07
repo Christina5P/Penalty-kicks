@@ -62,6 +62,7 @@ def penalty():
     global total_penalties, goalkeeper
     penalty_scores = 0
     goalkeeper_scores = 0
+    total_penalties = 0
 
     while total_penalties < 6:
         print('Choose spot from:\n lt=Left Top   lb=Left bottom,\n mt=Middle Top mb=Middle Bottom\n rt=Right Top  rb=Right bottom')
@@ -85,26 +86,34 @@ def penalty():
                 print(Fore.GREEN + 'GOOAAL!' + Style.RESET_ALL)
                 penalty_scores += 1
                 print('')
-        else:
-            print(Fore.RED + 'Invalid option! Please choose from lt, lb, mt, mb, rt, rb.' + Style.RESET_ALL)
-            print('')
-            
+           
+        # count scores after each shoot 
         total_penalties += 1
-
-    if total_penalties <= 6:
+        
         print(f'Total penalties taken: {total_penalties}')
-        print(f'Final score: Player {penalty_scores} - Goalkeeper {goalkeeper_scores}')
+        print(f'Score: Player {penalty_scores} - Goalkeeper {goalkeeper_scores}')
+   
+    if total_penalties <= 6:
+        print(f'                                    Total penalties taken: {total_penalties}')
+        print(f'                                    Score: Player {penalty_scores} - Goalkeeper {goalkeeper_scores}')
+
+    else:
+        print(Fore.RED + 'You stumbled on the keys, Please choose from lt, lb, mt, mb, rt, rb' + Style.RESET_ALL)
+        print('')
+        total_penalties += 1
 
 # Call function
 penalty()
-# restart or exit 
 
+# restart or exit 
+print('')
 restart= input('Good job! Do you want to restart? y/n:  ')
 if response.lower() == 'y':
     print('Start a new game') 
-    RESET_ALL
+    restart
 
 elif response.lower() == 'n':
+    print('')
     print("OK, see you next time \n")
     exit
 
