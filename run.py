@@ -1,9 +1,13 @@
-#
-#pitch = Pitch(pitch_color='grass', stripe=True)
-#fig, ax = pitch.draw(figsize=(8, 4))
-#annotation = ax.annotate('Who can resist this?', (60, 10), fontsize=30, ha='center')
-import random
-import json
+import matplotlib.pyplot as plt # soccer pitch
+from mplsoccer import Pitch, VerticalPitch
+import random # randomchoice to goalkeeper
+import json 
+from colorama import Fore, Back, Style #colour to text
+
+pitch = VerticalPitch(half=True)
+pitch = Pitch(pitch_color='grass', line_color='white',
+              stripe=True) 
+fig, ax = pitch.draw()
 
 # List for direction you will kick  
 kicks_direction = ['lt', 'lb', 'mt', 'mb', 'rt', 'rb']
@@ -38,6 +42,7 @@ to catch the ball.
 total_penalties = 0   # totalPenalties = penalty(totalPenalties) # antalet sparkar
 goalkeeper = None
 
+""" 
 print('         _____________________________________       ')
 print('          /                                  \        ')
 print('         /                                    \       ')
@@ -48,7 +53,7 @@ print('     /                                            \    ')
 print('   ------------------------------------------------   ')   
 print('')
 print('')
-
+""" 
 def penalty():
     global total_penalties
     penalty_Scores = 0
@@ -65,18 +70,19 @@ def penalty():
         print('Goalkeeper dives to:', directions[goalkeeper])
 
         if goalkeeper == userOption:
-            print('Goalkeeper catched the ball!')
+            print(Fore.RED + 'Goalkeeper catched the ball!')
+            print('')
             goalkeeper_Scores += 1
         elif goalkeeper != userOption:
-            print('GOOAAL!')
+            print(Fore.GREEN + 'GOOAAL!')
             penalty_Scores += 1
             print('')
         else:
-            print('Try again!')
+            print(Fore.RED + 'Try again!')
             
         total_penalties += 1
 
-    if total_penalties == 10:
+    if total_penalties == 6:
         # Describe how many penalties are used
         print(f'Total penalties taken: {total_penalties}')
         print(f'Final score: Player {penalty_Scores} - Goalkeeper {goalkeeper_Scores}')
