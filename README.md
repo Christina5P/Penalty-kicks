@@ -39,4 +39,5 @@ https://dcallanit.blogspot.com/2015/10/python-penalty-shoot-out.html - inspirati
 https://www.asciiart.eu/ 
 https://mplsoccer.readthedocs.io/en/latest/gallery/pitch_setup/plot_pitches.html - soccer pitch
 https://www.youtube.com/watch?app=desktop&v=u51Zjlnui4Y - tutoring colurs in Python
+https://docs.python.org/3/tutorial/errors.html - syntax error
 

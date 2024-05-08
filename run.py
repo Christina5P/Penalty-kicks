@@ -19,26 +19,24 @@ directions = {'lt': 'Left Top',
               'mt': 'Middle Top',
               'mb': 'Middle Bottom',
               'rt': 'Right top',
-              'rb': 'Right bottom',
-}
+              'rb': 'Right bottom'}
  
-# Welcome to Penalty Kick - 
+# Welcome to Penalty Kick 
 
 # Enter name and ask for instruction or move to game
 
 name = input('Hi Soccerplayer! Please enter your name: ')
 response = input(f'Thanks {name}, Do you want to see instructions? (y/n): ')
 
-while True:    
-    if response.lower() == 'y':
-        print('instructions') 
-    elif response.lower() == 'n':
-        print('')
-        print("OK, we start!\n")
+if response.lower() == 'y':
+    print('instructions') 
+elif response.lower() == 'n':
+    print('')
+    print("OK, we start!\n")
         
-        # error msg:
-    else:
-        print('Something went wrong, please answer (y/n):')
+    # error msg:
+else:
+    print('Something went wrong, please answer (y/n):')
         
 
 # variabel totalPenalties,  penalty(totalPenalties) counts shoots 
@@ -96,18 +94,20 @@ penalty()
 
 # restart or exit 
 print('')
-penalty = input('Good job! Do you want to restart? y/n:  ')
-while response.lower() == 'y':
-    print('Start a new game') 
-penalty = input
-    
+while True:
+        response=input('Good job! Do you want to restart? y/n: ')
+        
+        if response.lower() == 'y':
+            print('')
+            print('Start a new game')
+            print('')
+            penalty() 
+            
+        elif response.lower() == 'n':
+            print('')
+            print("OK, see you next time \n")
+            break
 
-if response.lower() == 'n':
-    print('')
-    print("OK, see you next time \n")
-    exit
-
-    # error msg:
-else:
-    print('Something went wrong, please answer (y/n):')
+        else:  
+            print('Something went wrong, please answer (y/n):')
  
