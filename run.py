@@ -1,8 +1,5 @@
-import matplotlib.pyplot as plt  # soccer pitch
-from mplsoccer import Pitch, VerticalPitch
-
 import random  # randomchoice to goalkeeper
-from colorama import Fore, Back, Style  #colour to text
+from colorama import Fore, Back, Style  # colour to text
 
 # to animate soccerpitch
 pitch = VerticalPitch(half=True)
