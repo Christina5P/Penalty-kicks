@@ -53,9 +53,9 @@ goalkeeper = None
 # function for player to choose where to shoot
 def penalty():
     global total_penalties, goalkeeper
-    penalty_scores = 0
-    goalkeeper_scores = 0
-    total_penalties = 0
+    global penalty_scores = 0
+    global goalkeeper_scores = 0
+    global total_penalties = 0
 
     while total_penalties < 6:
         print('Choose spot from:\n lt=Left Top   lb=Left bottom,\n mt=Middle Top mb=Middle Bottom\n rt=Right Top  rb=Right bottom')
@@ -72,29 +72,42 @@ def penalty():
                 
             if goalkeeper == user_option:
                 print('')
-                print(Fore.RED + 'Goalkeeper catched the ball!' + Style.RESET_ALL)
+                print(Fore.RED + 'Goalkeeper catched!' + Style.RESET_ALL)
                 print('')
                 goalkeeper_scores += 1
+                total_penalties += 1
             else:
                 print(Fore.GREEN + 'GOOAAL!' + Style.RESET_ALL)
                 penalty_scores += 1
+                total_penalties += 1
                 print('')
            
         else:
             print(Fore.RED + Back.WHITE + 'You stumbled on the keys, Please choose from lt, lb, mt, mb, rt, rb' + Style.RESET_ALL)
             print('')
-           
-        # count scores after each shoot 
-        total_penalties += 1
-        
-        print(Fore.BLUE + f'                                           Total penalties taken: {total_penalties}' + Style.RESET_ALL)
-        print(Fore.BLUE + f'                                           Score: Player {penalty_scores} - Goalkeeper {goalkeeper_scores}' + Style.RESET_ALL)
+            
+                   
+        print(Fore.BLUE + f'                                       Total penalties taken: {total_penalties}' + Style.RESET_ALL)
+        print(Fore.BLUE + f'                                       Score: Player {penalty_scores} - Goalkeeper {goalkeeper_scores}' + Style.RESET_ALL)
    
-    if total_penalties <= 2:
+    if total_penalties >= 1:
         print(Back.WHITE + Fore.BLUE + f'Total penalties taken: {total_penalties}' + Style.RESET_ALL)
         print(Back.WHITE + Fore.BLUE + f'Score: Player {penalty_scores} - Goalkeeper {goalkeeper_scores}' + Style.RESET_ALL)
-
     
+
+while True:    
+    if penalty_scores > 3:
+        print('You won!!!')
+        break
+
+    elif goalkeeper_scores > 3: 
+       print('You lost.')
+       break
+
+    elif total_penalties == 6 and penalty_scores == goalkeeper_scores:
+        print('It ended in a draw. You get a new round again')
+        break
+
 # Call function for game
 penalty()
 
