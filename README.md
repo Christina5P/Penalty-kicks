@@ -38,4 +38,5 @@ https://www.101computing.net/penalty-shootout/ - tutoring video
 https://dcallanit.blogspot.com/2015/10/python-penalty-shoot-out.html - inspiration of penalty shoot game
 https://www.asciiart.eu/ 
 https://mplsoccer.readthedocs.io/en/latest/gallery/pitch_setup/plot_pitches.html - soccer pitch
+https://www.youtube.com/watch?app=desktop&v=u51Zjlnui4Y - tutoring colurs in Python
 

@@ -1,13 +1,16 @@
 import random  # randomchoice to goalkeeper
 from colorama import Fore, Back, Style  # colour to text
+from pyfiglet import Figlet
 
-""" to animate soccerpitch
+import matplotlib.pyplot as plt
+from mplsoccer import Pitch, VerticalPitch
+
+# animate soccerpitch
 pitch = VerticalPitch(half=True)
-pitch = Pitch(pitch_color='grass', line_color='white',
-              stripe=True) 
+pitch = Pitch(pitch_color='grass', line_color='white',stripe=True) 
 fig, ax = pitch.draw()
-"""
 
+                                  
 # List for direction you will kick  
 kicks_direction = ['lt', 'lb', 'mt', 'mb', 'rt', 'rb']
 # dictionary of directions
@@ -19,25 +22,24 @@ directions = {'lt': 'Left Top',
               'rb': 'Right bottom',
 }
  
-
-
-
 # Welcome to Penalty Kick - 
 
 # Enter name and ask for instruction or move to game
+
 name = input('Hi Soccerplayer! Please enter your name: ')
 response = input(f'Thanks {name}, Do you want to see instructions? (y/n): ')
 
-if response.lower() == 'y':
-    print('instructions') 
-elif response.lower() == 'n':
-    print('')
-    print("OK, we start!\n")
-    # error msg:
-else:
-    print('Something went wrong, please answer (y/n):')
-    (f'Thanks {name}, Do you want to see instructions? (y/n): ')
-
+while True:    
+    if response.lower() == 'y':
+        print('instructions') 
+    elif response.lower() == 'n':
+        print('')
+        print("OK, we start!\n")
+        
+        # error msg:
+    else:
+        print('Something went wrong, please answer (y/n):')
+        
 
 # variabel totalPenalties,  penalty(totalPenalties) counts shoots 
 total_penalties = 0 
@@ -59,13 +61,13 @@ def penalty():
         valid_options = ['lt', 'lb', 'mt', 'mb', 'rt', 'rb']
         
         if user_option in valid_options:
-            print(Back.WHITE + f'You chose: {user_option}' + Style.RESET_ALL)
+            print(Back.WHITE + Fore.BLACK + f'You chose:', directions [user_option] + Style.RESET_ALL)
             goalkeeper = random.choice(kicks_direction)
             print('')
-            print(Back.WHITE + 'Goalkeeper dives to:', directions[goalkeeper] + Style.RESET_ALL)
-            penalty_scores += 1
+            print(Back.WHITE + Fore.BLACK + 'Goalkeeper dives to:', directions[goalkeeper] + Style.RESET_ALL)
                 
             if goalkeeper == user_option:
+                print('')
                 print(Fore.RED + 'Goalkeeper catched the ball!' + Style.RESET_ALL)
                 print('')
                 goalkeeper_scores += 1
@@ -85,8 +87,8 @@ def penalty():
         print(Fore.BLUE + f'                                           Score: Player {penalty_scores} - Goalkeeper {goalkeeper_scores}' + Style.RESET_ALL)
    
     if total_penalties <= 2:
-        print(Fore.BLUE + f'Total penalties taken: {total_penalties}' + Style.RESET_ALL)
-        print(Fore.BLUE + f'Score: Player {penalty_scores} - Goalkeeper {goalkeeper_scores}' + Style.RESET_ALL)
+        print(Back.WHITE + Fore.BLUE + f'Total penalties taken: {total_penalties}' + Style.RESET_ALL)
+        print(Back.WHITE + Fore.BLUE + f'Score: Player {penalty_scores} - Goalkeeper {goalkeeper_scores}' + Style.RESET_ALL)
 
     
 # Call function for game
