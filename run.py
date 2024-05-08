@@ -1,11 +1,12 @@
 import random  # randomchoice to goalkeeper
 from colorama import Fore, Back, Style  # colour to text
 
-# to animate soccerpitch
+""" to animate soccerpitch
 pitch = VerticalPitch(half=True)
 pitch = Pitch(pitch_color='grass', line_color='white',
               stripe=True) 
 fig, ax = pitch.draw()
+"""
 
 # List for direction you will kick  
 kicks_direction = ['lt', 'lb', 'mt', 'mb', 'rt', 'rb']
