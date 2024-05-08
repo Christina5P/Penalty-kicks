@@ -25,19 +25,25 @@ directions = {'lt': 'Left Top',
 
 # Enter name and ask for instruction or move to game
 
-name = input('Hi Soccerplayer! Please enter your name: ')
-response = input(f'Thanks {name}, Do you want to see instructions? (y/n): ')
 
-if response.lower() == 'y':
-    print('instructions') 
-elif response.lower() == 'n':
-    print('')
-    print("OK, we start!\n")
-        
-    # error msg:
-else:
-    print('Something went wrong, please answer (y/n):')
-        
+name = input('Hi Soccerplayer! Please enter your name: ')
+
+while True:
+    response = input(f'Thanks {name}, Do you want to see instructions? (y/n): ')
+
+    if response.lower() == 'y':
+        print('instructions') 
+        print('')
+        break
+    elif response.lower() == 'n':
+        print('')
+        print("OK, we start!\n")
+        break            
+
+        # error msg:
+    else:
+        print('Something went wrong, please answer (y/n):')
+     
 
 # variabel totalPenalties,  penalty(totalPenalties) counts shoots 
 total_penalties = 0 
