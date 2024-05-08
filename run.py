@@ -17,7 +17,12 @@ directions = {'lt': 'Left Top',
               'mb': 'Middle Bottom',
               'rt': 'Right top',
               'rb': 'Right bottom',
-             }
+}
+ 
+
+
+
+# Welcome to Penalty Kick - 
 
 # Enter name and ask for instruction or move to game
 name = input('Hi Soccerplayer! Please enter your name: ')
@@ -26,34 +31,18 @@ response = input(f'Thanks {name}, Do you want to see instructions? (y/n): ')
 if response.lower() == 'y':
     print('instructions') 
 elif response.lower() == 'n':
+    print('')
     print("OK, we start!\n")
     # error msg:
 else:
     print('Something went wrong, please answer (y/n):')
-
-"""
-function for player to kick to any of 6 direction, player has choosen from.
-The goalkeeper will either stay in center or jump to left or right side
-to catch the ball.
-"""
+    (f'Thanks {name}, Do you want to see instructions? (y/n): ')
 
 
 # variabel totalPenalties,  penalty(totalPenalties) counts shoots 
 total_penalties = 0 
 goalkeeper = None
 
-""" 
-print('         _____________________________________       ')
-print('          /                                  \        ')
-print('         /                                    \       ')
-print('        /                                      \      ')
-print('       /                                        \      ')
-print('      /                                          \     ')
-print('     /                                            \    ') 
-print('   ------------------------------------------------   ')   
-print('')
-print('')
-""" 
 
 # function for player to choose where to shoot
 def penalty():
@@ -70,10 +59,10 @@ def penalty():
         valid_options = ['lt', 'lb', 'mt', 'mb', 'rt', 'rb']
         
         if user_option in valid_options:
-            print(f'You chose: {user_option}')
+            print(Back.WHITE + f'You chose: {user_option}' + Style.RESET_ALL)
             goalkeeper = random.choice(kicks_direction)
             print('')
-            print('Goalkeeper dives to:', directions[goalkeeper])
+            print(Back.WHITE + 'Goalkeeper dives to:', directions[goalkeeper] + Style.RESET_ALL)
             penalty_scores += 1
                 
             if goalkeeper == user_option:
@@ -86,31 +75,32 @@ def penalty():
                 print('')
            
         else:
-            print(Fore.RED + 'You stumbled on the keys, Please choose from lt, lb, mt, mb, rt, rb' + Style.RESET_ALL)
+            print(Fore.RED + Back.WHITE + 'You stumbled on the keys, Please choose from lt, lb, mt, mb, rt, rb' + Style.RESET_ALL)
             print('')
            
         # count scores after each shoot 
         total_penalties += 1
         
-        print(f'                                           Total penalties taken: {total_penalties}')
-        print(f'                                           Score: Player {penalty_scores} - Goalkeeper {goalkeeper_scores}')
+        print(Fore.BLUE + f'                                           Total penalties taken: {total_penalties}' + Style.RESET_ALL)
+        print(Fore.BLUE + f'                                           Score: Player {penalty_scores} - Goalkeeper {goalkeeper_scores}' + Style.RESET_ALL)
    
-    if total_penalties <= 6:
-        print(f'Total penalties taken: {total_penalties}')
-        print(f'Score: Player {penalty_scores} - Goalkeeper {goalkeeper_scores}')
+    if total_penalties <= 2:
+        print(Fore.BLUE + f'Total penalties taken: {total_penalties}' + Style.RESET_ALL)
+        print(Fore.BLUE + f'Score: Player {penalty_scores} - Goalkeeper {goalkeeper_scores}' + Style.RESET_ALL)
 
     
-# Call function
+# Call function for game
 penalty()
 
 # restart or exit 
 print('')
-restart= input('Good job! Do you want to restart? y/n:  ')
-if response.lower() == 'y':
+penalty = input('Good job! Do you want to restart? y/n:  ')
+while response.lower() == 'y':
     print('Start a new game') 
-    restart
+penalty = input
+    
 
-elif response.lower() == 'n':
+if response.lower() == 'n':
     print('')
     print("OK, see you next time \n")
     exit
@@ -118,3 +108,4 @@ elif response.lower() == 'n':
     # error msg:
 else:
     print('Something went wrong, please answer (y/n):')
+ 
