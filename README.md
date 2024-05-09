@@ -11,6 +11,12 @@
 ### Example of error 
 
 ## Technologies
+Python 
+Github
+Heroku
+Pyfiglet
+Colorama
+
 
 ## Testing
 
@@ -40,4 +46,6 @@ https://www.asciiart.eu/
 https://mplsoccer.readthedocs.io/en/latest/gallery/pitch_setup/plot_pitches.html - soccer pitch
 https://www.youtube.com/watch?app=desktop&v=u51Zjlnui4Y - tutoring colurs in Python
 https://docs.python.org/3/tutorial/errors.html - syntax error
+https://www.youtube.com/watch?v=Ovwr_Wt-og0 - tutoring pyfiglet
+
 
