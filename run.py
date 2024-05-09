@@ -39,16 +39,22 @@ def main():
             for run in element['paragraph']['elements']:
                 if 'textRun' in run:
                     instructions += run['textRun']['content']
-
+while True:
     name = input('Hi Soccerplayer! Please enter your name: ')
     response = input(f'Thanks {name}, Do you want to see instructions? (y/n):')
 
     if response.lower() == 'y':
         print(instructions)
+        break
+
     elif response.lower() == 'n':
         print("\nOK, we start!\n")
+        break
+
     else:
         print('Something went wrong, please answer (y/n):')
+        continue
+      
 if __name__ == "__main__":        
     main()
 
