@@ -1,6 +1,5 @@
 import random  # randomchoice to goalkeeper
 from colorama import Fore, Back, Style  # colour to text
-from pyfiglet import Figlet
 
 import matplotlib.pyplot as plt
 from mplsoccer import Pitch, VerticalPitch
