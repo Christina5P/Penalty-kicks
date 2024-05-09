@@ -2,7 +2,18 @@ import random  # randomchoice to goalkeeper
 from colorama import Fore, Back, Style  # colour to text
 import pyfiglet 
 import os
+import gspread 
+from google.oauth2.service_account import Credentials
 
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+    ]
+CREDS = Credentials.from_service_account_file('creds.json')
+SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+DOCS = GSPREAD_CLIENT.open('Instructions')
 
 # List for direction you will kick  
 kicks_direction = ['lt', 'lb', 'mt', 'mb', 'rt', 'rb']
@@ -15,7 +26,6 @@ directions = {'lt': 'Left Top',
               'rb': 'Right bottom'}
  
 # Welcome to Penalty Kick 
-
 # Enter name and ask for instruction or move to game
 
 
@@ -25,9 +35,14 @@ while True:
     response = input(f'Thanks {name}, Do you want to see instructions? (y/n): ')
 
     if response.lower() == 'y':
-        print('instructions') 
+        document_name = "Instructions" 
+        
+
+        for element in elements:
+            text_run = element.get('textRun')
         print('')
         break
+
     elif response.lower() == 'n':
         print('')
         print("OK, we start!\n")
