@@ -12,15 +12,15 @@ When you are going to shoot that penalty "on life or death" you have to make a s
 
 ## Contents
 
-* Features [Features](#ankarlänk)
-* Design
-* Flowcharts
-* Example of errors
-* Test
-* Technologies
-* Deployment
-* Acknowledgement
-* Credits
+* Features [Features](#features)
+* Design [Design](#design)
+* Flowcharts [Flowcharts](#flowcharts)
+* Example of errors [Example of errors](#example of errors)
+* Test [Test](#test)
+* Technologies [Technologies](#Technologies)
+* Deployment [Deployment](#Deployment)
+* Acknowledgement [Acknowledgement](#Acknowledgement)
+* Credits [Credits](#Credits)
   
 
 
