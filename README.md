@@ -12,7 +12,7 @@ When you are going to shoot that penalty "on life or death" you have to make a s
 
 ## Contents
 
-* Features
+* Features [Features](#ankarlänk)
 * Design
 * Flowcharts
 * Example of errors
