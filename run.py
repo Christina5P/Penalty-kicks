@@ -10,8 +10,7 @@ CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPES)
 DOC_SERVICE = build('docs', 'v1', credentials=SCOPED_CREDS)
 
-DOCUMENT_ID = 'https://docs.google.com/document/d/1fJO5gAoMi7rKUywXLD60dA\
-    -wM5b8s5z6QXKmCr07rmc/edit?usp=sharing'
+DOCUMENT_ID = 'https://docs.google.com/document/d/1fJO5gAoMi7rKUywXLD60dA-wM5b8s5z6QXKmCr07rmc/edit?usp=sharing'
 document_id = DOCUMENT_ID.split('/')[5]
 
 kicks_direction = ['lt', 'lb', 'mt', 'mb', 'rt', 'rb']
@@ -27,7 +26,6 @@ directions = {'lt': 'Left Top',
               'rb': 'Right bottom'}
 
 # Welcome to Penalty Kick
-# Enter name and ask for instruction or move to game
 
 
 def main():
@@ -51,14 +49,15 @@ def main():
         if response.lower() == 'y':
             print(instructions)
             break
+            os.system('cls' if os.name == 'nt' else 'clear')
 
         elif response.lower() == 'n':
             print("\nOK, we start!\n")
             break
-
         else:
             print('Something went wrong, please answer (y/n):')
             continue
+        os.system('cls' if os.name == 'nt' else 'clear')
 
 
 if __name__ == "__main__":
@@ -92,11 +91,10 @@ def penalty():
             if goalkeeper == user_option:
                 result = pyfiglet.figlet_format('\nGoalkeeper catched!')
                 print(Fore.RED + result + Style.RESET_ALL)
-                print('')
                 goalkeeper_scores += 1
                 total_penalties += 1
             elif user_option != goalkeeper:
-                result = pyfiglet.figlet_format('\nGOOAAL!')
+                result = pyfiglet.figlet_format('GOOAAL!')
                 print(Fore.GREEN + result + Style.RESET_ALL)
                 penalty_scores += 1
                 total_penalties += 1
@@ -106,10 +104,10 @@ def penalty():
                     ' + Style.RESET_ALL)
         if total_penalties >= 1:
             print(Back.CYAN + Fore.BLACK + f'Total penalties taken:\
-                 {total_penalties}' + Style.RESET_ALL)
-            print(Back.CYAN + Fore.BLACK + f'Score: Player \
-                {penalty_scores} - Goalkeeper {goalkeeper_scores}\
-                    ' + Style.RESET_ALL)
+                {total_penalties}' + Style.RESET_ALL)
+            print(Back.CYAN + Fore.BLACK + f'Score: Player\
+                {penalty_scores}-Goalkeeper\
+                     {goalkeeper_scores}' + Style.RESET_ALL)
         if penalty_scores > 3:
             print('\nYou won!!!')
             break
@@ -133,6 +131,7 @@ while True:
     if response.lower() == 'y':
         print('')
         print('Start a new game\n')
+        os.system('cls' if os.name == 'nt' else 'clear')
         penalty()
     elif response.lower() == 'n':
         print("\nOK, see you next time \n")
