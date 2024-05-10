@@ -110,8 +110,6 @@ Open your repo and go to the green button "code" on right hand side.
 Easiest way is to open with github desktop:
 ![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/fdbd43b0-56d7-41f1-b05c-2a0b5508b109)
 
-https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository 
-
 You can read more information of cloning at Github page: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 
 
@@ -127,7 +125,6 @@ I used some videos and website for tutoring of some block of codes.
 ### https://econowmics.com/python-penalty-kicks-simulator/ - function for penaltykicks
 ### https://www.101computing.net/penalty-shootout/ - tutoring video
 ### https://dcallanit.blogspot.com/2015/10/python-penalty-shoot-out.html - inspiration of penalty shoot game
-### https://www.asciiart.eu/ 
 ### https://mplsoccer.readthedocs.io/en/latest/gallery/pitch_setup/plot_pitches.html - soccer pitch
 ### https://www.youtube.com/watch?app=desktop&v=u51Zjlnui4Y - tutoring colurs in Python
 ### https://docs.python.org/3/tutorial/errors.html - syntax error
