@@ -15,7 +15,7 @@ When you are going to shoot that penalty "on life or death" you have to make a s
 *  [Features](#features)
 *  [Design](#design)
 *  [Flowcharts](#flowcharts)
-*  [Example of errors](#example of errors)
+*  [Bugs / errors](#Bugs/errors)
 *  [Test](#test)
 *  [Technologies](#Technologies)
 *  [Deployment](#Deployment)
@@ -91,7 +91,7 @@ After you have deployed in HEROKU, you can visit your publish webside from Herok
 ![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/648ac9c0-8260-4c73-b441-d1d369c62e51)
 
 
-###How to Fork
+### How to Fork
 You can fork this repo if you want to have an own copy on your own repository to work with.
 
 To fork, you click the fork button on top of right corner in main repo.
@@ -102,7 +102,7 @@ Create the fork.
 ![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/b0e66870-8451-41bc-adce-889ce9f94d3a)
 
 
-How to Clone
+### How to Clone
 If you clone the repo, you create a copy of the repo in your own repo (with all files and history)
 It creates a remote to the original repo, so you can work in your copy and push it back to original.
 
@@ -115,8 +115,6 @@ https://docs.github.com/en/repositories/creating-and-managing-repositories/cloni
 You can read more information of cloning at Github page: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 
 
-Type (without quotation marks): "git clone" followed by your copied link from GitHub.
-You can now access the repo in your, or by typing (without quotation marks) "code ." in your Terminal.
 
 ## Acknowledgements
 
