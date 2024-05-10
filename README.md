@@ -12,18 +12,16 @@ When you are going to shoot that penalty "on life or death" you have to make a s
 
 ## Contents
 
-* Features [Features](#features)
-* Design [Design](#design)
-* Flowcharts [Flowcharts](#flowcharts)
-* Example of errors [Example of errors](#example of errors)
-* Test [Test](#test)
-* Technologies [Technologies](#Technologies)
-* Deployment [Deployment](#Deployment)
-* Acknowledgement [Acknowledgement](#Acknowledgement)
-* Credits [Credits](#Credits)
+*  [Features](#features)
+*  [Design](#design)
+*  [Flowcharts](#flowcharts)
+*  [Example of errors](#example of errors)
+*  [Test](#test)
+*  [Technologies](#Technologies)
+*  [Deployment](#Deployment)
+*  [Acknowledgement](#Acknowledgement)
+*  [Credits](#Credits)
   
-
-
 
 ## Features
 When the game starts you have 6 directions to choose for the penalty: Left top or bottom, Middle top or bottom or Right Top or bottom.
@@ -79,66 +77,63 @@ https://mplsoccer.readthedocs.io - I was thinking of create a soccer pitch from 
 
 ## Deployment
 For deploying python codes, I use Heroku  app.
-
 At first you commit everything to GitHub
-
 After that you log in to HEROKU and create a new app.
+
 ![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/6bca34d3-0789-4bea-876b-78ee2d19bd68)
 
 You connect the app to your repository in GitHub with same name
-
 I choose to make a manual deploy, so I can see that everything goes ok and have controll of my first projekt.
-![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/ac27a44c-d540-41ba-abfc-74c7ab49a862)
 
+![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/ac27a44c-d540-41ba-abfc-74c7ab49a862)
 
 After you have deployed in HEROKU, you can visit your publish webside from Heroku or Github.
 ![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/648ac9c0-8260-4c73-b441-d1d369c62e51)
 
 
-How to Fork
-Should you wish to fork this repo, here is a guide on how to do that:
+###How to Fork
+You can fork this repo if you want to have an own copy on your own repository to work with.
 
-Firstly, go to https://github.com/emmy-codes/cat-adventures-python
-
-On the main repo page, click the Fork button near the top right corner'
-On the create a fork page, check the Owner of the repo is set to the GitHub org you wish to use, and change the name of the repo if you wish. 2a: Add a description if you want to
+To fork, you click the fork button on top of right corner in main repo.
+On the create a fork page, change the name of the repo if you wish.
 Check the box here if you want to make a copy of the main branch or multiple branches (main is selected by default)
-Create the fork
-Screenshot from an old project as I cannot fork my Python project due to not having any organizations connected to my account, and presumably because this repo is already a fork of the CI template
+Create the fork.
+
+![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/b0e66870-8451-41bc-adce-889ce9f94d3a)
+
 
 How to Clone
-For cloning the repo you will need:
+If you clone the repo, you create a copy of the repo in your own repo (with all files and history)
+It creates a remote to the original repo, so you can work in your copy and push it back to original.
 
-The repo open
-Your IDE of choice
-On the repo page, click on the green "Code" button
-On the dropdown from the Code button, click on your chosen key (pictured here is SSH)
-Click the copy button (shown as two squares on top of one another)
-Open your IDE of choice and open the Terminal, or in my case, open the Terminal on your computer (I run Linux on Windows so may be slightly different for Mac/Windows users)
-Check that you're in the right folder (shown here by checking my current folder by using the input: ls
-Change as needed to reach your desired folder.
+Open your repo and go to the green button "code" on right hand side.
+Easiest way is to open with github desktop:
+![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/fdbd43b0-56d7-41f1-b05c-2a0b5508b109)
+
+https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository 
+
+You can read more information of cloning at Github page: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
+
+
 Type (without quotation marks): "git clone" followed by your copied link from GitHub.
-You can now access the repo in your IDE if cloned directly there, or by typing (without quotation marks) "code ." in your Terminal.
-
-
-
+You can now access the repo in your, or by typing (without quotation marks) "code ." in your Terminal.
 
 ## Acknowledgements
 
 For this project, I have used the acknowledgement I´ve got from MPL and "loce sandwiches project" 
 I used some videos and website for tutoring of some block of codes.
 
-*https://trinket.io/python/909d6c5804- inspiration penalty definition
-*https://www.giraffeacademy.com/programming-languages/python - tutoring of formatting
-*https://www.w3schools.com/python - tutoring of formatting
-*https://econowmics.com/python-penalty-kicks-simulator/ - function for penaltykicks
-*https://www.101computing.net/penalty-shootout/ - tutoring video
-*https://dcallanit.blogspot.com/2015/10/python-penalty-shoot-out.html - inspiration of penalty shoot game
-*https://www.asciiart.eu/ 
-*https://mplsoccer.readthedocs.io/en/latest/gallery/pitch_setup/plot_pitches.html - soccer pitch
-*https://www.youtube.com/watch?app=desktop&v=u51Zjlnui4Y - tutoring colurs in Python
-*https://docs.python.org/3/tutorial/errors.html - syntax error
-*https://www.youtube.com/watch?v=Ovwr_Wt-og0 - tutoring pyfiglet
+### https://trinket.io/python/909d6c5804- inspiration penalty definition
+### https://www.giraffeacademy.com/programming-languages/python - tutoring of formatting
+### https://www.w3schools.com/python - tutoring of formatting
+### https://econowmics.com/python-penalty-kicks-simulator/ - function for penaltykicks
+### https://www.101computing.net/penalty-shootout/ - tutoring video
+### https://dcallanit.blogspot.com/2015/10/python-penalty-shoot-out.html - inspiration of penalty shoot game
+### https://www.asciiart.eu/ 
+### https://mplsoccer.readthedocs.io/en/latest/gallery/pitch_setup/plot_pitches.html - soccer pitch
+### https://www.youtube.com/watch?app=desktop&v=u51Zjlnui4Y - tutoring colurs in Python
+### https://docs.python.org/3/tutorial/errors.html - syntax error
+### https://www.youtube.com/watch?v=Ovwr_Wt-og0 - tutoring pyfiglet
 
 ## Credits
 
