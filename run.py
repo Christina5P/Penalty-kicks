@@ -4,6 +4,7 @@ import pyfiglet
 import os
 from google.oauth2.service_account import Credentials
 from googleapiclient.discovery import build
+from turtle import*
 
 SCOPES = ['https://www.googleapis.com/auth/documents.readonly']
 CREDS = Credentials.from_service_account_file('creds.json')
@@ -120,9 +121,8 @@ def penalty():
             print('It ended in a draw. You get a new round again')
             break
 
+
 # Call function for game
-
-
 penalty()
 
 # restart or exit
