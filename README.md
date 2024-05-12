@@ -1,5 +1,8 @@
 # Penalty Kicks
 
+Live link:
+https://penaltykicks-dd69cb0985ef.herokuapp.com/
+
 Penalty kicks is a back end game, based on algorithms.
 You don´t need to be a brilliant soccerplayer to have a chance in this game, just luck!
 You start up the game with writing your name, and take a chance to name yourself as a famous soccerplayer and get the illusion to win with penalty shoots.
@@ -33,8 +36,10 @@ If you write wrong characters by mistake, you get a highlighted message to redon
 
 ## Design
 Since Python is a back end language, I havn´t focus on UX experience as much as the front end projects.
-For a more game friendly enviroment, I have used some colours and design font 
+For a more game friendly enviroment, I have used some colours and design font.
 I have also put in commando to clear the terminal for an easier action.
+
+Through the project I have investigate some design potions from mpl soccer, turtle and also drawing a soccercage with python codes, but decided to drop those functions.
 
 ## Flowchart
 
@@ -56,20 +61,27 @@ Here is some examples through my project
 
 * I got error in deployment after the first day and after research, I found a comma in the json file,t hat block the deployment.
 * I tried to install and use pitch from mplsoccger for design, but I didnt get it through in the terminal and then I decided I skip that design
+* I tried draw circel (thought of a moving soccervall) but it wasnt compatible with gitpod codespace
 
   
 ## Testing
 
+* valid https://pep8ci.herokuapp.com/
+ ![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/03d487e3-64a7-4bb4-ac4e-983fa52c2f2f)
+It is 1 notes of 1 line too long in the validation.
+I tried to shorten the line, but then I got errors that API didn´t worked, so I decided to keep the link on one line.
+
+
 ## Technologies
 
 Technologies I have used for this project:
-Python - write the codes which are the base of the project
-Github - Save the project in a repository
-Google Drive - Instructions saved in a google document
-Google cloud - API from Google documents to Python for instructions
-Heroku - Deploy it to a public webside
-Pyfiglet - Use of designed fonts 
-Colorama - coloring the text
+* Python -Language of this project
+* Github - Save the project in a repository
+* Google Drive - Instructions saved in a google document
+* Google cloud - API from Google documents to Python for instructions
+* Heroku - Deploy it to a public webside
+* Pyfiglet - Use of designed fonts 
+* Colorama - coloring the text
 
 https://mplsoccer.readthedocs.io - I was thinking of create a soccer pitch from mpl soccer, but I changed my mind.
 
