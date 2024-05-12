@@ -4,7 +4,6 @@ import pyfiglet
 import os
 from google.oauth2.service_account import Credentials
 from googleapiclient.discovery import build
-from turtle import*
 
 SCOPES = ['https://www.googleapis.com/auth/documents.readonly']
 CREDS = Credentials.from_service_account_file('creds.json')
@@ -26,13 +25,19 @@ directions = {'lt': 'Left Top',
               'rt': 'Right top',
               'rb': 'Right bottom'}
 
+
 # Welcome to Penalty Kick
+
+def print_welcome_banner():
+    welcome_banner = pyfiglet.figlet_format('Welcome to\nPenalty kick')
+    print(welcome_banner)
 
 
 def main():
     """function start with asking for name
     and if you want to see the instructions from api
     """
+    print_welcome_banner()
     document = DOC_SERVICE.documents().get(documentId=document_id).execute()
     instructions = ""
 
@@ -65,7 +70,6 @@ if __name__ == "__main__":
     main()
 
 
-# function for player to choose where to shoot
 def penalty():
     """
     function and algorithm for the game. Start with players choice of direction
@@ -125,17 +129,23 @@ def penalty():
 # Call function for game
 penalty()
 
-# restart or exit
-while True:
-    response = input('\nGood job! Do you want to restart? y/n: ')
-    if response.lower() == 'y':
-        print('')
-        print('Start a new game\n')
-        os.system('cls' if os.name == 'nt' else 'clear')
-        penalty()
-    elif response.lower() == 'n':
-        print("\nOK, see you next time \n")
-        break
 
-    else:
-        print('Something went wrong, please answer (y/n):')
+# restart or exit
+def restart_game():
+    while True:
+        response = input('\nGood job! Do you want to restart? y/n: ')
+        if response.lower() == 'y':
+            print('')
+            print('Start a new game\n')
+            os.system('cls' if os.name == 'nt' else 'clear')
+            penalty()
+        elif response.lower() == 'n':
+            print("\nOK, see you next time \n")
+            break
+
+        else:
+            print('Something went wrong, please answer (y/n):')
+
+
+# Call restart_game function
+restart_game()
