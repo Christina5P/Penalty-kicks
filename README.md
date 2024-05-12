@@ -13,6 +13,9 @@ When the game ends you get questioned if you want to restart or not.
 My idea for this game comes out of my soccerplayers in family and wish to practice the algorithm that comes with python.
 When you are going to shoot that penalty "on life or death" you have to make a strategy and lot of thinking.
 
+![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/fdffaf65-bcad-44c3-afe2-c9763a33fb44)
+
+
 ## Contents
 
 *  [Features](#features)
@@ -33,6 +36,14 @@ After your choice the computer makes a random choice which direction the goalkee
 You will shoot up to 6 times and you can win or loose after 4 times, if its get all goals or fails in a row.
 Its easy to follow how many penaltys are done and scoring of user and goalkeeper.
 If you write wrong characters by mistake, you get a highlighted message to redone and the wrong input doesn´t counts in number of penaltys.
+
+![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/b6100b42-cf35-4c4a-bf0d-8b3f81f2e7f4)
+
+![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/3ab86b4d-b434-4191-bd94-72199e14e324)
+
+
+![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/20a396c5-865e-4d75-9b0e-48425dcf93f0)
+
 
 ## Design
 Since Python is a back end language, I havn´t focus on UX experience as much as the front end projects.
@@ -70,6 +81,10 @@ Here is some examples through my project
  ![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/03d487e3-64a7-4bb4-ac4e-983fa52c2f2f)
 It is 1 notes of 1 line too long in the validation.
 I tried to shorten the line, but then I got errors that API didn´t worked, so I decided to keep the link on one line.
+
+I have done manual testing of every moment in the game, so everything works.
+
+![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/3643c6f5-c8d4-46d8-a60e-ca972af69c72)
 
 
 ## Technologies
