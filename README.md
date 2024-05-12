@@ -17,16 +17,15 @@ When you are going to shoot that penalty "on life or death" you have to make a s
 
 ## Contents
 
-* Features
-* Design
-* Flowcharts
-* Bugs/errors
-* Test
-* Technologies
-* Deployment
-* Acknowledgment
-* Credits
-  
+*  [Features](#features)
+*  [Design](#design)
+*  [Flowcharts](#flowcharts)
+*  [Bugs / errors](#Bugs/errors)
+*  [Test](#test)
+*  [Technologies](#Technologies)
+*  [Deployment](#Deployment)
+*  [Acknowledgement](#Acknowledgement)
+*  [Credits](#Credits)
 
 ## Features
 When the game starts you have 6 directions to choose for the penalty: Left top or bottom, Middle top or bottom, or Right Top or bottom.
