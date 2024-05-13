@@ -19,11 +19,12 @@ direction you will kick made in a dictionary, så you can text short names
 but look at full name for better understanding
 """
 directions = {'lt': 'Left Top',
-              'lb': 'Left Bottom',
               'mt': 'Middle Top',
-              'mb': 'Middle Bottom',
               'rt': 'Right top',
-              'rb': 'Right bottom'}
+              'lb': 'Left Bottom',
+              'mb': 'Middle Bottom',
+              'rb': 'Right bottom'
+              }
 
 
 # Welcome to Penalty Kick
@@ -72,20 +73,20 @@ if __name__ == "__main__":
 
 def penalty():
     """
-    function and algorithm for the game. Start with players choice of direction
-    and compares to goalkeepers random. There is up to 6 penaltys if you dont
-    win before
+    Function and algorithm for the game. Start with players choice of direction
+    and compares to goalkeepers random. There is up to 6 penalties if you don't
+    win before.
     """
     total_penalties = 0
     goalkeeper_scores = 0
     penalty_scores = 0
 
     while total_penalties < 6:
-        print('Choose spot from:\n lt=Left Top   lb=Left bottom,\n mt=Middle\
-            Top mb=Middle Bottom\nrt=Right Top  rb=Right bottom')
+        print('Choose spot from:\n lt=Left Top mt=Middle Top rt=Right Top\
+              lb=Left bottom,\n  mb=Middle Bottom\n  rb=Right bottom')
         user_option = input('\nWhere would you like to shoot?:')
         print('')
-        valid_options = ['lt', 'lb', 'mt', 'mb', 'rt', 'rb']
+        valid_options = ['lt', 'mt', 'rt', 'lb', 'mb', 'rb']
         os.system('cls' if os.name == 'nt' else 'clear')
         if user_option in valid_options:
             print(Back.WHITE + Fore.BLACK + f'You chose:\
