@@ -4,6 +4,8 @@ import pyfiglet
 import os
 from google.oauth2.service_account import Credentials
 from googleapiclient.discovery import build
+import sys
+import time
 
 SCOPES = ['https://www.googleapis.com/auth/documents.readonly']
 CREDS = Credentials.from_service_account_file('creds.json')
@@ -34,14 +36,21 @@ def print_welcome_banner():
     print(welcome_banner)
 
 
+def print_instructions(instructions):
+    for char in instructions:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.03)
+    print()
+
+
 def main():
     """function start with asking for name
     and if you want to see the instructions from api
     """
     print_welcome_banner()
     document = DOC_SERVICE.documents().get(documentId=document_id).execute()
-    instructions = ""
-
+    instructions = ''
     for element in document.get('body', {}).get('content', []):
         if 'paragraph' in element:
             for run in element['paragraph']['elements']:
@@ -54,7 +63,7 @@ def main():
          (y/n):')
 
         if response.lower() == 'y':
-            print(instructions)
+            print_instructions(instructions)
             break
             os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -93,8 +102,8 @@ def penalty():
                          'lb', 'mb', 'rb']
         os.system('cls' if os.name == 'nt' else 'clear')
         if user_option in valid_options:
-            print(Back.WHITE + Fore.BLACK + f'You chose:\n
-                 {directions[user_option]}' + Style.RESET_ALL)
+            print(f"{Back.WHITE}{Fore.BLACK}You chosee:\
+                {directions[user_option]}{Style.RESET_ALL}")
             goalkeeper = random.sample(kicks_direction, 2)
             print(Back.WHITE + Fore.BLACK + '\nGoalkeeper dives to:')
             for direction in goalkeeper:
