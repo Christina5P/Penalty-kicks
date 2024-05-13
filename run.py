@@ -100,18 +100,17 @@ lb=Left bottom, mb=Middle Bottom, rb=Right bottom''')
         if user_option in valid_options:
             print(Back.WHITE + Fore.BLACK + f'You chose:\
                  {directions[user_option]}' + Style.RESET_ALL)
-            goalkeeper = get_goalkeeper_choice()
-            goalkeeper_choice = random.sample(goalkeeper, k=2)
-            print(Back.WHITE + Fore.BLACK + '\nGoalkeeper dives to:', end=' ')
-            for direction in goalkeeper_choice:
-                print(directions[direction], end=' ')
-            print(Style.RESET_ALL)
+            goalkeeper_group = get_goalkeeper_choice()
+            print(Back.WHITE + Fore.BLACK + 'Goalkeeper dives to: '
+                  f"{directions[goalkeeper_group[0]]} \
+                     / {directions[goalkeeper_group[1]]:<25}",
+                  Style.RESET_ALL)
 
-            if user_option in goalkeeper_choice:
+            if user_option in goalkeeper_group:
                 result = pyfiglet.figlet_format('Goalkeeper caught!')
                 print(Fore.RED + result + Style.RESET_ALL)
                 goalkeeper_scores += 1
-            elif user_option not in goalkeeper_choice:
+            elif user_option not in goalkeeper_group:
                 result = pyfiglet.figlet_format('GOOAAL!')
                 print(Fore.GREEN + result + Style.RESET_ALL)
                 penalty_scores += 1
@@ -126,18 +125,22 @@ lb=Left bottom, mb=Middle Bottom, rb=Right bottom''')
         print(Back.CYAN + Fore.BLACK + f'Score: Player {penalty_scores:>5} \
             - Goalkeeper {goalkeeper_scores:>5}' + Style.RESET_ALL)
 
-    if penalty_scores > goalkeeper_scores:
-        print('\nYou won!!!')
-    elif goalkeeper_scores > penalty_scores:
-        print('You lost.')
-    else:
-        print('It ended in a draw. You get a new round again')
+        if penalty_scores > 3:
+            print('\nYou won!!!')
+            break
+
+        elif goalkeeper_scores > 3:
+            print('You lost.')
+            break
+
+        elif penalty_scores == 3 and goalkeeper_scores == 3:
+            print('It ended in a draw. You get a new round again')
+            break
 
 
 def get_goalkeeper_choice():
     groups = [['lt', 'lb'], ['mt', 'mb'], ['rt', 'rb']]
-    goalkeeper_group = random.choice(groups)
-    return goalkeeper_group
+    return random.choice(groups)
 
 
 # Call function for game

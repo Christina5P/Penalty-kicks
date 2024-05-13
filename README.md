@@ -150,6 +150,7 @@ I used some videos and website for tutoring of some block of codes.
 ### https://docs.python.org/3/tutorial/errors.html - syntax error
 ### https://www.educative.io/answers/what-is-randomsample-in-python -tutoring about random sample
 ### https://www.youtube.com/watch?v=Ovwr_Wt-og0 - tutoring pyfiglet
+### https://www.youtube.com/watch?v=2h8e0tXHfk0 - typewriting style
 ### https://app.grammarly.com/ddoc -spellchecking
 
 ## Credits
