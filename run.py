@@ -98,8 +98,8 @@ lb=Left bottom, mb=Middle Bottom, rb=Right bottom''')
         valid_options = ['lt', 'mt', 'rt', 'lb', 'mb', 'rb']
         os.system('cls' if os.name == 'nt' else 'clear')
         if user_option in valid_options:
-            print(Back.WHITE + Fore.BLACK + f'You chose\
-                : {directions[user_option]}' + Style.RESET_ALL)
+            print(Back.WHITE + Fore.BLACK + f'You chose:\
+                 {directions[user_option]}' + Style.RESET_ALL)
             goalkeeper = get_goalkeeper_choice()
             goalkeeper_choice = random.sample(goalkeeper, k=2)
             print(Back.WHITE + Fore.BLACK + '\nGoalkeeper dives to:', end=' ')
@@ -122,10 +122,9 @@ lb=Left bottom, mb=Middle Bottom, rb=Right bottom''')
                  Please choose from lt, lb, mt, mb, rt, rb\n\
                     ' + Style.RESET_ALL)
         print(Back.CYAN + Fore.BLACK + f'Total penalties taken:\
-             {total_penalties}' + Style.RESET_ALL)
-        print(Back.CYAN + Fore.BLACK + f'Score: Player\
-             {penalty_scores} - Goalkeeper\
-                 {goalkeeper_scores}' + Style.RESET_ALL)
+             {total_penalties:< 15}' + Style.RESET_ALL)
+        print(Back.CYAN + Fore.BLACK + f'Score: Player {penalty_scores:>5} \
+            - Goalkeeper {goalkeeper_scores:>5}' + Style.RESET_ALL)
 
     if penalty_scores > goalkeeper_scores:
         print('\nYou won!!!')
