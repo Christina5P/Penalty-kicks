@@ -82,18 +82,25 @@ def penalty():
     penalty_scores = 0
 
     while total_penalties < 6:
-        print('Choose spot from:\n lt=Left Top mt=Middle Top rt=Right Top\
-              lb=Left bottom,\n  mb=Middle Bottom\n  rb=Right bottom')
+        print("""Choose spot from:
+  lt=Left Top, mt=Middle Top, rt=Right Top
+  lb=Left bottom, mb=Middle Bottom, rb=Right bottom""")
+
         user_option = input('\nWhere would you like to shoot?:')
         print('')
-        valid_options = ['lt', 'mt', 'rt', 'lb', 'mb', 'rb']
+        goalkeeper = random.sample(kicks_direction, 2)
+        valid_options = ['lt', 'mt', 'rt',
+                         'lb', 'mb', 'rb']
         os.system('cls' if os.name == 'nt' else 'clear')
         if user_option in valid_options:
-            print(Back.WHITE + Fore.BLACK + f'You chose:\
+            print(Back.WHITE + Fore.BLACK + f'You chose:\n
                  {directions[user_option]}' + Style.RESET_ALL)
-            goalkeeper = random.choice(kicks_direction)
-            print(Back.WHITE + Fore.BLACK + '\nGoalkeeper dives to:\
-                ', directions[goalkeeper] + Style.RESET_ALL)
+            goalkeeper = random.sample(kicks_direction, 2)
+            print(Back.WHITE + Fore.BLACK + '\nGoalkeeper dives to:')
+            for direction in goalkeeper:
+                print(directions[direction], end=' ')
+            print(Style.RESET_ALL)
+
             if goalkeeper == user_option:
                 result = pyfiglet.figlet_format('\nGoalkeeper catched!')
                 print(Fore.RED + result + Style.RESET_ALL)
