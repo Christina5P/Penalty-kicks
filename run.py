@@ -99,11 +99,11 @@ lb=Left bottom, mb=Middle Bottom, rb=Right bottom''')
         os.system('cls' if os.name == 'nt' else 'clear')
         if user_option in valid_options:
             print(Back.WHITE + Fore.BLACK + f'You chose:\
-                 {directions[user_option]}' + Style.RESET_ALL)
+                 {directions[user_option]:<10}' + Style.RESET_ALL)
             goalkeeper_group = get_goalkeeper_choice()
             print(Back.WHITE + Fore.BLACK + 'Goalkeeper dives to: '
-                  f"{directions[goalkeeper_group[0]]} \
-                     / {directions[goalkeeper_group[1]]:<25}",
+                  f"{directions[goalkeeper_group[0]]:<20} \
+                    ,{directions[goalkeeper_group[1]]:<5}",
                   Style.RESET_ALL)
 
             if user_option in goalkeeper_group:
