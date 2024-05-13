@@ -17,16 +17,16 @@ document_id = DOCUMENT_ID.split('/')[5]
 
 kicks_direction = ['lt', 'lb', 'mt', 'mb', 'rt', 'rb']
 """
-direction you will kick made in a dictionary, så you can text short names
+create direction from array in a dictionary, så you can text short names
 but look at full name for better understanding
 """
+
 directions = {'lt': 'Left Top',
               'mt': 'Middle Top',
               'rt': 'Right top',
               'lb': 'Left Bottom',
               'mb': 'Middle Bottom',
-              'rb': 'Right bottom'
-              }
+              'rb': 'Right bottom'}
 
 
 # Welcome to Penalty Kick
@@ -91,56 +91,54 @@ def penalty():
     penalty_scores = 0
 
     while total_penalties < 6:
-        print("""Choose spot from:
-  lt=Left Top, mt=Middle Top, rt=Right Top
-  lb=Left bottom, mb=Middle Bottom, rb=Right bottom""")
-
-        user_option = input('\nWhere would you like to shoot?:')
-        print('')
-        goalkeeper = random.sample(kicks_direction, 2)
-        valid_options = ['lt', 'mt', 'rt',
-                         'lb', 'mb', 'rb']
+        print('''Choose spot from:
+lt=Left Top, mt=Middle Top, rt=Right Top,
+lb=Left bottom, mb=Middle Bottom, rb=Right bottom''')
+        user_option = input('\nWhere would you like to shoot?:\n')
+        valid_options = ['lt', 'mt', 'rt', 'lb', 'mb', 'rb']
         os.system('cls' if os.name == 'nt' else 'clear')
         if user_option in valid_options:
-            print(f"{Back.WHITE}{Fore.BLACK}You chosee:\
-                {directions[user_option]}{Style.RESET_ALL}")
-            goalkeeper = random.sample(kicks_direction, 2)
-            print(Back.WHITE + Fore.BLACK + '\nGoalkeeper dives to:')
-            for direction in goalkeeper:
+            print(Back.WHITE + Fore.BLACK + f'You chose\
+                : {directions[user_option]}' + Style.RESET_ALL)
+            goalkeeper = get_goalkeeper_choice()
+            goalkeeper_choice = random.sample(goalkeeper, k=2)
+            print(Back.WHITE + Fore.BLACK + '\nGoalkeeper dives to:', end=' ')
+            for direction in goalkeeper_choice:
                 print(directions[direction], end=' ')
             print(Style.RESET_ALL)
 
-            if goalkeeper == user_option:
-                result = pyfiglet.figlet_format('\nGoalkeeper catched!')
+            if user_option in goalkeeper_choice:
+                result = pyfiglet.figlet_format('Goalkeeper caught!')
                 print(Fore.RED + result + Style.RESET_ALL)
                 goalkeeper_scores += 1
-                total_penalties += 1
-            elif user_option != goalkeeper:
+            elif user_option not in goalkeeper_choice:
                 result = pyfiglet.figlet_format('GOOAAL!')
                 print(Fore.GREEN + result + Style.RESET_ALL)
                 penalty_scores += 1
-                total_penalties += 1
+
+            total_penalties += 1
         else:
             print(Fore.RED + Back.WHITE + '\nYou stumbled on the keys,\
                  Please choose from lt, lb, mt, mb, rt, rb\n\
                     ' + Style.RESET_ALL)
-        if total_penalties >= 1:
-            print(Back.CYAN + Fore.BLACK + f'Total penalties taken:\
-                {total_penalties}' + Style.RESET_ALL)
-            print(Back.CYAN + Fore.BLACK + f'Score: Player\
-                {penalty_scores}-Goalkeeper\
-                     {goalkeeper_scores}' + Style.RESET_ALL)
-        if penalty_scores > 3:
-            print('\nYou won!!!')
-            break
+        print(Back.CYAN + Fore.BLACK + f'Total penalties taken:\
+             {total_penalties}' + Style.RESET_ALL)
+        print(Back.CYAN + Fore.BLACK + f'Score: Player\
+             {penalty_scores} - Goalkeeper\
+                 {goalkeeper_scores}' + Style.RESET_ALL)
 
-        elif goalkeeper_scores > 3:
-            print('You lost.')
-            break
+    if penalty_scores > goalkeeper_scores:
+        print('\nYou won!!!')
+    elif goalkeeper_scores > penalty_scores:
+        print('You lost.')
+    else:
+        print('It ended in a draw. You get a new round again')
 
-        elif penalty_scores == 3 and goalkeeper_scores == 3:
-            print('It ended in a draw. You get a new round again')
-            break
+
+def get_goalkeeper_choice():
+    groups = [['lt', 'lb'], ['mt', 'mb'], ['rt', 'rb']]
+    goalkeeper_group = random.choice(groups)
+    return goalkeeper_group
 
 
 # Call function for game
