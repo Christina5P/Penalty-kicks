@@ -67,7 +67,8 @@ def main():
 
         if response.lower() == 'y':
             print_instructions(instructions)
-            break
+            # Call function for game
+            penalty()
             os.system('cls' if os.name == 'nt' else 'clear')
 
         elif response.lower() == 'n':
@@ -77,10 +78,6 @@ def main():
             print('Something went wrong, please answer (y/n):')
             continue
         os.system('cls' if os.name == 'nt' else 'clear')
-
-
-if __name__ == "__main__":
-    main()
 
 
 def penalty():
@@ -138,16 +135,12 @@ lb=Left bottom, mb=Middle Bottom, rb=Right bottom''')
 
         elif penalty_scores == 3 and goalkeeper_scores == 3:
             print('It ended in a draw. You get a new round again')
-            break
+            restart_game()
 
 
 def get_goalkeeper_choice():
     groups = [['lt', 'lb'], ['mt', 'mb'], ['rt', 'rb']]
     return random.choice(groups)
-
-
-# Call function for game
-penalty()
 
 
 # restart or exit
@@ -167,5 +160,5 @@ def restart_game():
             print('Something went wrong, please answer (y/n):')
 
 
-# Call restart_game function
-restart_game()
+if __name__ == "__main__":
+    main()

@@ -70,10 +70,10 @@ Here are some examples from my project
 
 * I tried to install and use pitch from mplsoccer for design, but I didn't get it through in the terminal and then I decided I skip that design
 
-* I tried to draw Circel with tutle(thought of a moving soccer ball) 
+* I tried to draw Circel with turtle(thought of a moving soccer ball) 
 but it wasn't compatible with gitpod codespace
 
-* I got styleproblem for information of numberof penaltys and scores (too mucj space
+* I got styleproblem for information of numberof penaltys and scores (too much space
  between goalkeepers choices of direction). I tried to style it in different ways,
   as \t, \n and 
   f"{directions[goalkeeper_group[0]]:<20},{directions[goalkeeper_group[1]]:<5}",
