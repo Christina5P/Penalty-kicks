@@ -29,8 +29,8 @@ directions = {'lt': 'Left Top',
               'mb': 'Middle Bottom',
               'rb': 'Right bottom'}
 
-
 # Welcome to Penalty Kick banner
+
 
 def print_welcome_banner():
     welcome_banner = pyfiglet.figlet_format('Welcome to\nPenalty kick')
@@ -139,12 +139,16 @@ lb=Left bottom, mb=Middle Bottom, rb=Right bottom''')
 
         elif penalty_scores == 3 and goalkeeper_scores == 3:
             print('It ended in a draw. You get a new round again')
-            restart_game()
+            break
 
 
 def get_goalkeeper_choice():
     groups = [['lt', 'lb'], ['mt', 'mb'], ['rt', 'rb']]
     return random.choice(groups)
+
+
+# Call function for game
+penalty()
 
 
 # restart or exit
@@ -164,5 +168,5 @@ def restart_game():
             print('Something went wrong, please answer (y/n):')
 
 
-# Call function for game
-penalty()
+# Call restart_game function
+restart_game()
