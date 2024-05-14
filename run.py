@@ -67,9 +67,9 @@ def main():
 
         if response.lower() == 'y':
             print_instructions(instructions)
-            # Call function for game
-            penalty()
+            break
             os.system('cls' if os.name == 'nt' else 'clear')
+            break
 
         elif response.lower() == 'n':
             print("\nOK, we start!\n")
@@ -78,6 +78,10 @@ def main():
             print('Something went wrong, please answer (y/n):')
             continue
         os.system('cls' if os.name == 'nt' else 'clear')
+
+
+if __name__ == "__main__":
+    main()
 
 
 def penalty():
@@ -160,5 +164,5 @@ def restart_game():
             print('Something went wrong, please answer (y/n):')
 
 
-if __name__ == "__main__":
-    main()
+# Call function for game
+penalty()
