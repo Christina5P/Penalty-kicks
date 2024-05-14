@@ -67,9 +67,21 @@ You also need other algorithms, if you choose a nonvalid input, want to read ins
 ### Bugs / errors
 Here are some examples from my project
 * I got an error in deployment after the first day and after research, I found a comma in the JSON file, that blocked the deployment.
-* I tried to install and use pitch from mplsoccer for design, but I didn't get it through in the terminal and then I decided I skip that design
-* I tried to draw Circel (thought of a moving soccer ball) but it wasn't compatible with gitpod codespace
 
+* I tried to install and use pitch from mplsoccer for design, but I didn't get it through in the terminal and then I decided I skip that design
+
+* I tried to draw Circel with tutle(thought of a moving soccer ball) 
+but it wasn't compatible with gitpod codespace
+
+* I got styleproblem for information of numberof penaltys and scores (too mucj space
+ between goalkeepers choices of direction). I tried to style it in different ways,
+  as \t, \n and 
+  f"{directions[goalkeeper_group[0]]:<20},{directions[goalkeeper_group[1]]:<5}",
+  I hasn´t got a really god effect of the styling.
+
+* You get goal 90% of time
+  I fixed it by changing the rules of the goalkeeper's catch. 
+  I made one more function with groups, so the goalkeeper covered up both up and down in each direction. 
   
 ## Testing
 
@@ -152,9 +164,11 @@ I used some videos and website for tutoring of some block of codes.
 ### https://www.youtube.com/watch?v=Ovwr_Wt-og0 - tutoring pyfiglet
 ### https://www.youtube.com/watch?v=2h8e0tXHfk0 - typewriting style
 ### https://app.grammarly.com/ddoc -spellchecking
+### https://monica.im/home - chat generator to solve the stylingproblem of scores
 
 ## Credits
 
 * My mentor Gareth - gives me ideas and tips along the way.
 * My schoolmate Josefine Yoshida Dahlqvist - always helpful and on my side :-) 
+* My student fellows Niklas Hugdahl and Ahmed
 

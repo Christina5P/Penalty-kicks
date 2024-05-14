@@ -1,11 +1,12 @@
 import random  # randomchoice to goalkeeper
 from colorama import Fore, Back, Style  # colour to text
-import pyfiglet
-import os
-from google.oauth2.service_account import Credentials
+import pyfiglet  # for design text
+import os  # clear terminal
+from google.oauth2.service_account import Credentials  # api
 from googleapiclient.discovery import build
-import sys
-import time
+import sys  # for typing instructions
+import time  # for typing instructions
+
 
 SCOPES = ['https://www.googleapis.com/auth/documents.readonly']
 CREDS = Credentials.from_service_account_file('creds.json')
@@ -29,7 +30,7 @@ directions = {'lt': 'Left Top',
               'rb': 'Right bottom'}
 
 
-# Welcome to Penalty Kick
+# Welcome to Penalty Kick banner
 
 def print_welcome_banner():
     welcome_banner = pyfiglet.figlet_format('Welcome to\nPenalty kick')
@@ -37,6 +38,8 @@ def print_welcome_banner():
 
 
 def print_instructions(instructions):
+    """typing instruction from API
+    """
     for char in instructions:
         sys.stdout.write(char)
         sys.stdout.flush()
