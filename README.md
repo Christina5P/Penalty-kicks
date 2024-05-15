@@ -71,7 +71,8 @@ You kick 6 times, but if you get the same result 4 times, you get over equal and
 If you have won, you end the game. Otherwise, you continue to the end of 6 shoots.
 You also need other algorithms, if you choose a nonvalid input, want to read instructions, and if you want to restart the game.
 
-![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/04ea0225-34e7-45ce-bb96-b5ad42c8f9ff)
+![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/2b20be80-e49f-4a6a-ae3f-7ebc920a7a07)
+
 
 
 
