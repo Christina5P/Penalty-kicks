@@ -7,7 +7,7 @@ from googleapiclient.discovery import build
 import sys  # for typing instructions
 import time  # for typing instructions
 
-
+# for api to get instructions from google docs
 SCOPES = ['https://www.googleapis.com/auth/documents.readonly']
 CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPES)
@@ -143,6 +143,9 @@ lb=Left bottom, mb=Middle Bottom, rb=Right bottom''')
 
 
 def get_goalkeeper_choice():
+    """
+    to group goalkeepers catch to only 3 directions
+    """
     groups = [['lt', 'lb'], ['mt', 'mb'], ['rt', 'rb']]
     return random.choice(groups)
 
