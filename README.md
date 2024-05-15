@@ -7,12 +7,15 @@ Penalty kicks are a back-end game, based on algorithms.
 You don´t need to be a brilliant soccer player to have a chance in this game, just luck! 
 You start up the game by writing your name and taking a chance to name yourself as a famous soccer player and get the illusion of winning with penalty shots.
 You will be asked to read instructions or not, so you don´t always have to scroll down a lot of text if you don't need to.
+If you want to read instructions, they come by typing in the terminal, so it's easy to follow and without scrolling.
 You don´t have to be nervous about making a mistake or breaking something, since you get an error message and a retry if you don't use a valid input. 
 When the game ends you get questioned if you want to restart or not.
 My idea for this game comes out of the soccer players in my family who wish to practice the algorithm that comes with Python.
 When you are going to shoot that penalty "on life or death" you have to make a strategy and lot of thinking.
 
-![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/fdffaf65-bcad-44c3-afe2-c9763a33fb44)
+![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/58f171a2-b575-4bf8-8bd5-bec064be959e)
+
+![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/52c014e6-ed20-4c8b-97c6-99be8af5a3c0)
 
 
 ## Contents
@@ -29,18 +32,26 @@ When you are going to shoot that penalty "on life or death" you have to make a s
 
 ## Features
 When the game starts you have 6 directions to choose for the penalty: Left top or bottom, Middle top or bottom, or Right Top or bottom.
-They are shortened code, so it´s easy to text, but are explained so you don't get confused or have to remember the codes.
+They are shortened codes, so it´s easy to type, but get explained so you don't get confused or have to remember the codes.
 After your choice, the computer makes a random choice of which direction the goalkeeper will jump. If he jumps in the same direction, you get a fail.
+The goalkeeper covers both the top and bottom of every direction. There was an option to be needed so the random works better and the game gets more interesting. 
 You will shoot up to 6 times and you can win or lose after 4 times if it gets all goals or fails in a row.
 It's easy to follow how many penalties are done and the scoring of the user and goalkeeper.
+
+
+![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/d71ae23c-ac33-4e95-929e-0ffba9fe9d86)
+
+![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/abb30cfa-67f9-49f8-9cfd-a62c04eeebad)
+
+![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/dc82614d-d8e3-4086-8f7f-f5433761b8cc)
+
+![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/13f9c6da-5913-4479-ac1c-ccf1e2612bb7)
+
 If you write wrong characters by mistake, you get a highlighted message to redone and the wrong input doesn´t count in several penalties.
 
-![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/b6100b42-cf35-4c4a-bf0d-8b3f81f2e7f4)
+![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/f9d71b01-1f88-451f-ad98-626cbb9b4c8f)
 
-![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/3ab86b4d-b434-4191-bd94-72199e14e324)
-
-
-![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/20a396c5-865e-4d75-9b0e-48425dcf93f0)
+![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/05c0b9aa-edb3-48d9-8d30-51a0ade57b7d)
 
 
 ## Design
@@ -64,24 +75,25 @@ You also need other algorithms, if you choose a nonvalid input, want to read ins
 
 
 
-### Bugs / errors
+### Bugs/errors
 Here are some examples from my project
 * I got an error in deployment after the first day and after research, I found a comma in the JSON file, that blocked the deployment.
 
 * I tried to install and use pitch from mplsoccer for design, but I didn't get it through in the terminal and then I decided I skip that design
 
-* I tried to draw Circel with turtle(thought of a moving soccer ball) 
+* I tried to draw Circle with turtle(thought of a moving soccer ball) 
 but it wasn't compatible with gitpod codespace
 
-* I got styleproblem for information of numberof penaltys and scores (too much space
+* I got style problem for information of number of penaltys and scores (too much space
  between goalkeepers choices of direction). I tried to style it in different ways,
   as \t, \n and 
   f"{directions[goalkeeper_group[0]]:<20},{directions[goalkeeper_group[1]]:<5}",
-  I hasn´t got a really god effect of the styling.
+  I havn´t got a really good effect of the styling.
+![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/7e60f48c-37e5-4e20-b3dc-0367d83384cc)
 
-* You get goal 90% of time
+* You get goals 85% of the time
   I fixed it by changing the rules of the goalkeeper's catch. 
-  I made one more function with groups, so the goalkeeper covered up both up and down in each direction. 
+  I made one more function with groups, so the goalkeeper covered up both up and down in each direction, by creating groups of the 3 different directions.
   
 ## Testing
 
@@ -101,8 +113,8 @@ Technologies I have used for this project:
 * Python -Language of this project
 * Github - Save the project in a repository
 * Google Drive - Instructions saved in a google document
-* Google cloud - API from Google documents to Python for instructions
-* Heroku - Deploy it to a public webside
+* Google Cloud - API from Google documents to Python for instructions
+* Heroku - Deploy it to a public website
 * Pyfiglet - Use of designed fonts 
 * Colorama - coloring the text
 
@@ -117,7 +129,7 @@ After that you log in to HEROKU and create a new app.
 ![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/6bca34d3-0789-4bea-876b-78ee2d19bd68)
 
 You connect the app to your repository in GitHub with the same name 
-I choose to make a manual deployment, so I can see that everything goes ok and have control of my first project.
+I chose to make a manual deployment, so I can see that everything goes ok and have control of my first project.
 
 ![image](https://github.com/Christina5P/Penalty-kicks/assets/160019695/ac27a44c-d540-41ba-abfc-74c7ab49a862)
 
@@ -148,23 +160,36 @@ You can read more information on cloning at the GitHub : https://docs.github.com
 
 ## Acknowledgements
 
-For this project, I have used the acknowledgement I´ve got from MPL and "loce sandwiches project" 
+For this project, I have used the acknowledgement I´ve got from MPL and "love sandwiches project" 
 I used some videos and website for tutoring of some block of codes.
 
 ### https://trinket.io/python/909d6c5804- inspiration penalty definition
+
 ### https://www.giraffeacademy.com/programming-languages/python - tutoring of formatting
+
 ### https://www.w3schools.com/python - tutoring of formatting
-### https://econowmics.com/python-penalty-kicks-simulator/ - function for penaltykicks
+
+### https://econowmics.com/python-penalty-kicks-simulator/ - function for penalty kicks
+
 ### https://www.101computing.net/penalty-shootout/ - tutoring video
+
 ### https://dcallanit.blogspot.com/2015/10/python-penalty-shoot-out.html - inspiration of penalty shoot game
+
 ### https://mplsoccer.readthedocs.io/en/latest/gallery/pitch_setup/plot_pitches.html - soccer pitch
-### https://www.youtube.com/watch?app=desktop&v=u51Zjlnui4Y - tutoring colurs in Python
+
+### https://www.youtube.com/watch?app=desktop&v=u51Zjlnui4Y - tutoring colours in Python
+
 ### https://docs.python.org/3/tutorial/errors.html - syntax error
+
 ### https://www.educative.io/answers/what-is-randomsample-in-python -tutoring about random sample
+
 ### https://www.youtube.com/watch?v=Ovwr_Wt-og0 - tutoring pyfiglet
+
 ### https://www.youtube.com/watch?v=2h8e0tXHfk0 - typewriting style
+
 ### https://app.grammarly.com/ddoc -spellchecking
-### https://monica.im/home - chat generator to solve the stylingproblem of scores
+
+### https://monica.im/home - chat generator to solve the styling problem of scores
 
 ## Credits
 
